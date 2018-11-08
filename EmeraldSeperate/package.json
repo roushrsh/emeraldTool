@@ -1,0 +1,61 @@
+{
+  "name": "emerald",
+  "homepage": "https://roushrsh.github.io/REPO",
+  "version": "0.1.0",
+  "author": "Soroush Hajizadeh",
+  "description": "A High Accuuuuuuuracy Gem3 Base Machine Learning DNA Mapping Tool for 150 bp Illumina Reads V1.0",
+  "keywords": [
+    "A collection",
+    "of",
+    "keywords"
+  ],
+  "maintainers": [
+    "Soroush Hajizadeh <roushrsh@hotmail.com> (http://www.github.com/roushrsh)"
+  ],
+  "repository": [
+    {
+      "type": "git",
+      "url": "git://github.com/roushrsh/REPO.git"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/USERNAME/REPO/issues"
+  },
+  "license": "MIT",
+  "main": "index.htm",
+  "window": {
+    "title": "Emerald",
+    "icon": "_img/emerald.png",
+    "toolbar": true,
+    "resizable": true,
+    "visible": true,
+    "transparent": false,
+    "width": 1366,
+    "height": 768,
+    "min_width": 480,
+    "min_height": 360,
+    "max_width": 8192,
+    "max_height": 4320,
+    "position": "center",
+    "always-on-top": false,
+    "show_in_taskbar": true,
+    "fullscreen": false,
+    "frame": true,
+    "as_desktop": false
+  },
+  "nodejs": true,
+  "single-instance": true,
+  "node-main": "_scripts/node.js",
+  "webkit": {
+    "page-cache": false,
+    "java": false,
+    "plugin": true
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "nw": "^0.34.1"
+  },
+  "scripts": {
+    "start": "nw ."
+  }
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<script src="myJavaScript.js"></script>
+
+  <head>
+
+    <title class="applicationTitle">Emerald</title>
+    <link rel="stylesheet" type="text/css" href="theme.css">
+    <link rel="stylesheet" href="slate.min.css" data-swatch="swapper">
+    <link rel="stylesheet" href="style.css">
+
+
+    <div class="container" role="main">
+      <header>
+        <h3 class = "text-center">
+          <span  style="color: #408861; text-shadow: -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000,1px 1px 0 #000000;"  class="applicationTitle">Emerald:</span>
+          <medium style="color: #FED269" class="applicationDescription">A High Accuracy Gem3 Base Machine Learning DNA Mapping Tool for 150 bp Illumina Reads</small>
+        </h3>
+      </header>
+
+    </head>
+
+  <body role="document" class="prod">
+
+      <section>
+          <div class="row">
+
+            <div class="col-xs-6 col-s-6 col-md-6 col-l-6">
+              <h3 style="color: #FED269" class = "text-center"> Required tools </h3>
+              <p>&nbsp;</p>
+
+
+
+              <div style="background-color:#589E7D" class="ezdz form-group jumbotron text-center well h3" title="Click to get Python and Pip">
+                <form class = button2 target="_blank" onclick="pythonInstaller()">
+                    <input type="button" value="Click to install Python 2.7 and Pip" />
+                </form>
+              </div>
+
+
+              <div style="background-color:#589E7D" class="ezdz form-group jumbotron text-center well h3" title="Click to install Gem3">
+                <form class = button2 target="_blank" onclick="gccInstaller()">
+                    <input type="button" value="Click to install Git and GCC"/>
+                </form>
+
+                <h6 class = "text-center"></h6>
+
+                <form class = button2 target="_blank" onclick="Gem3Installer()">
+                    <input type="button" value="Click to install Gem3"/>
+                </form>
+
+                <h6 class = "text-center"></h6>
+              </div>
+
+              <div style="background-color:#589E7D" class="ezdz form-group jumbotron text-center well h3" title="Click to get Required Files">
+
+                <form class = button2  target="_blank"  action="https://drive.google.com/file/d/1DnUsJ3mpOM9hgOufn6RRApfuegUhSakQ/view" method="get">
+                    <input type="submit" value="Download Human Genome Index" />
+                </form>
+                <p><p>
+                <p>*Or generate it yourself using Gem3's indexer and your own Human Genome Fasta <p>
+              </div>
+
+              <div style="background-color:#589E7D" class="ezdz form-group jumbotron text-center well h3" title="Tensorflow Link">
+                <form class = button2 target="_blank" onclick="pipTensorFlowInstaller()">
+                    <input  style="background-color:transparent" type="button" value="Click to install Tensorflow"/>
+                </form>
+
+                <h6 class = "text-center"></h6>
+
+                <form class = button2 target="_blank" onclick="kerasFlowInstaller()">
+                    <input  style="background-color:transparent" type="button" value="Click to install Keras and deps"/>
+                </form>
+              </div>
+
+            </div>
+
+
+
+        <div class="col-xs-6 col-s-6 col-md-6 col-l-6">
+                  <h3 style="color: #FED269" class = "text-center"> Choose the required folders and locations </h3>
+                  <p>&nbsp;</p>
+
+
+                  <h3 style="color:#000000" class="text-center"> Required to Map<h3>
+
+                <h4 style="color: #FED269" class = "text-center">Illumina Reads Fasta File</h4>
+                <div style="background-color:#589E7D" class="ezdz form-group jumbotron text-center well h3" title="Click to browse for your file.">
+                  <span class="imageContainer"></span>
+                  <input type="file" id="FastaFile" onchange="fastaOfUser()" />
+
+                </div>
+
+
+                <h4 style="color: #FED269" class = "text-center">Human Genome Index File</h4>
+                <div style="background-color:#589E7D" class="ezdz form-group jumbotron text-center well h3" title="Click to browse for your file.">
+                  <span class="imageContainer"></span>
+                  <input type="file" id="humanGenomeIndex" onchange="gemOfUser()" />
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-s-12 col-md-12 col-l-12 text-center">
+                      <div class="onoffswitch">
+                          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                          <label class="onoffswitch-label" for="myonoffswitch">
+                              <span class="onoffswitch-inner"></span>
+                              <span class="onoffswitch-switch"></span>
+                          </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p> <p>
+                  <div style="background-color:transparent" class="text-center" >
+                    <form class = button2 target="_blank" onclick="fastaMapper()">
+                        <input  style="background-color:transparent; font-size: 22px" type="button" value="Map!"/>
+                    </form>
+                  </div>
+
+                <p>&nbsp;</p>
+
+                <h3 style="color:#000000" class="text-center"> Optional Tool<h3>
+
+                <h4 style="color: #FED269" class = "text-center">  Choose the genome with which to index</h4>
+
+                <div style="background-color:#589E7D" class="ezdz form-group jumbotron text-center well h3" title="Click to browse for your file.">
+                <!--  <span class="imageContainer"></span> -->
+                <input type="file" id="humanGenomeFile" onchange="previewFile()" />
+                </div>
+
+
+              <div style="background-color:transparent" class="text-center" >
+                <form class = button2 target="_blank" onclick="fastaIndexer()">
+                    <input  style="background-color:transparent; font-size: 22px" type="button" value="Index"/>
+                </form>
+              </div>
+        </div>
+
+        </form>
+
+        <hr />
+
+      </section>
+
+    </div>
+  </body>
+  <div class="msa-box">
+  	<a class="msa-button" href="#msa-popup1">About</a>
+  </div>
+  <div id="msa-popup1" class="msa-overlay">
+  	<div class="msa-popup">
+  		<h2>About</h2>
+  		<a class="msa-close" href="#">X (Return)</a>
+  		<div class="msa-content">
+        <h3> 1. Gem3 is maintained by Santiago-Marco Sola. The GitHub repository can be found at https://github.com/smarco/gem3-mapper</h3>
+
+        <h3> 2. If you have suggestions for improvement, bugs, or would like other features to be added, you can email me at roushrsh@hotmail.com </h3>
+  		</div>
+  	</div>
+  </div>
+
+  </div>
+
+</html>
